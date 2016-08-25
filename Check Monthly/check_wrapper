@@ -1,0 +1,14 @@
+#!/bin/bash
+ 
+# Find tomorrow day in IST time zone 
+day=$(TZ=IST-24 date +%d)
+ 
+# Compare it
+# If both are 1 means today is the last day of a month
+if test $day -eq 1; then
+    # Call the last day of the month koerslijt
+A_SCRIPT
+else
+    # Call the normal each day of the month koerslijt
+ANOTHER_SCRIPT
+fi
